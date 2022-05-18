@@ -3,8 +3,6 @@ const socket = io("http://localhost:8000");
 const form = document.getElementById("send-container");
 const messageInput = document.getElementById("messageInp");
 const messageContainer = document.querySelector(".container");
-// var audio = new Audio("../media/message_alert.mp3");
-var audio = new Audio("message_alert.mp3");
 
 const append = (message, position) => {
   const messageElement = document.createElement("div");
@@ -12,9 +10,6 @@ const append = (message, position) => {
   messageElement.classList.add("message");
   messageElement.classList.add(position);
   messageContainer.append(messageElement);
-  if (position === "left") {
-    audio.play();
-  }
 };
 
 const userName = prompt("Please enter your name to join chat room!");
